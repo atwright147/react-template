@@ -20,16 +20,8 @@ export default {
             {
                 test: /\.js$/,
                 use: {
-                    loader: 'babel-loader',
-                    options: {
-                        presets: [
-                            'env',
-                            'react'
-                        ]
-                    }
-                },
-                // include: path.resolve(__dirname, 'app/src'),
-                exclude: /node_modules/
+                    loader: 'babel-loader'
+                }
             },
             {
                 test: /\.(sass|scss)$/,
@@ -39,13 +31,5 @@ export default {
                 }),
             },
         ]
-    },
-    plugins: [
-        new ExtractTextPlugin('style.css'),
-        new HtmlWebpackPlugin({
-            template: './src/index.html',
-            filename: 'index.html',
-            inject: 'body'
-        })
-    ]
+    }
 }
