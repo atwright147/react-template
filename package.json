@@ -5,6 +5,8 @@
   "main": "src/index.js",
   "scripts": {
     "dev": "webpack-dev-server",
+    "dev:stubs": "npm run dev & npm run stubs",
+    "stubs": "stubby -d ./stubs/api.yaml --watch",
     "lint": "eslint ./src",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

@@ -1,23 +1,30 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 
-class List extends Component {
-    constructor(props) {
-        super(props);
+import Form from './Form';
+
+class FormContainer extends Component {
+    constructor() {
+        super();
+        this.state = { list: {} };
+    }
+
+    componentDidMount() {
+        axios
+            .get('http://localhost:8882/api/lists/1')
+            .then((res) => {
+                this.setState({
+                    'list': res.data
+                });
+            })
+            .catch((err) => {
+                console.error(err);  // eslint-disable-line no-console
+            })
     }
 
     render() {
-        return (
-            <div>
-                <h1>List</h1>
-                <p>A list of things</p>
-                <ul>
-                    <li>Item 01</li>
-                    <li>Item 02</li>
-                    <li>Item 03</li>
-                </ul>
-            </div>
-        );
+        return <Form formData={this.state.formData} />
     }
 }
 
-export default List;
+export default FormContainer;
