@@ -10,19 +10,6 @@ class ListContainer extends Component {
         this.state = { list: {} };
     }
 
-    // componentDidMount() {
-    //     axios
-    //         .get('http://localhost:8882/api/lists/1')
-    //         .then((res) => {
-    //             this.setState({
-    //                 'list': res.data
-    //             });
-    //         })
-    //         .catch((err) => {
-    //             console.error(err);  // eslint-disable-line no-console
-    //         })
-    // }
-
     render() {
         return <List items={this.props.list} />
     }

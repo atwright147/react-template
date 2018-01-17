@@ -14,23 +14,8 @@ const initialState = {
 
 const store = configureStore(initialState);
 
-const items = [
-    {
-        id: 1,
-        content: 'Item 01'
-    },
-    {
-        id: 2,
-        content: 'Item 02'
-    },
-    {
-        id: 3,
-        content: 'Item 03'
-    },
-]
-
 // initialise
-store.dispatch(listActions.updateListItems(items));
+store.dispatch(listActions.updateListItems());
 
 ReactDOM.render(
     <Provider store={store}>
