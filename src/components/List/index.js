@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-import Form from './Form';
+import List from './List.js';
 
-class FormContainer extends Component {
+class ListContainer extends Component {
     constructor() {
         super();
         this.state = { list: {} };
@@ -23,8 +23,8 @@ class FormContainer extends Component {
     }
 
     render() {
-        return <Form formData={this.state.formData} />
+        return <List items={this.state.list} />
     }
 }
 
-export default FormContainer;
+export default ListContainer;

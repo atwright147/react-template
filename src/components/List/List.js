@@ -11,9 +11,9 @@ class List extends Component {
                 <h1>List</h1>
                 <p>A list of things</p>
                 <ul>
-                    <li>Item 01</li>
-                    <li>Item 02</li>
-                    <li>Item 03</li>
+                { this.props.items && this.props.items.length && this.props.items.map(item =>
+                    <li key={item.id}>{item.content}</li>
+                )}
                 </ul>
             </div>
         );
