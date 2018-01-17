@@ -4,7 +4,7 @@ export default (state = [], action) => {
             return Object.assign(
                 {},
                 state,
-                { listItems: action.listItems }
+                { items: action.listItems }
             );
 
         default:
