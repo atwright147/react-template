@@ -4,10 +4,11 @@
   "description": "",
   "main": "src/index.js",
   "scripts": {
-    "dev": "webpack-dev-server",
+    "build": "webpack --config webpack.prod.babel.js",
+    "dev": "webpack-dev-server --config webpack.dev.babel.js",
     "dev:stubs": "npm run dev & npm run stubs",
     "stubs": "stubby -d ./stubs/api.yaml --watch",
-    "lint": "eslint ./src",
+    "lint": "eslint .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -38,6 +39,7 @@
     "stubby": "^4.0.0",
     "style-loader": "^0.19.1",
     "webpack": "^3.10.0",
-    "webpack-dev-server": "^2.11.0"
+    "webpack-dev-server": "^2.11.0",
+    "webpack-merge": "^4.1.2"
   }
 }

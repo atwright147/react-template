@@ -6,8 +6,6 @@ import List from './components/List';
 import configureStore from './store/configureStore';
 import * as listActions from './actions/listActions';
 
-import './styles/base.scss'
-
 const initialState = {
     listItems: [],
 }

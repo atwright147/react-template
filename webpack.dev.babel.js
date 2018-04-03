@@ -1,20 +1,14 @@
-import path from 'path';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
 
 export default {
-    entry: './src/index.js',
-    output: {
-        path: path.resolve('dist'),
-        filename: 'bundle.js'
-    },
+    devtool: 'inline-source-map',
     devServer: {
         contentBase: 'src',
         historyApiFallback: {
             index: '/'
         },
     },
-    devtool: 'source-map',
     module: {
         loaders: [
             {
@@ -33,11 +27,11 @@ export default {
         ]
     },
     plugins: [
-        new ExtractTextPlugin({
-            filename: 'bundle.css',
-            disable: false,
-            allChunks: true
-        }),
+        // new ExtractTextPlugin({
+        //     filename: 'bundle.css',
+        //     disable: false,
+        //     allChunks: true
+        // }),
         new HtmlWebpackPlugin({
             template: 'src/index.html',
         }),
