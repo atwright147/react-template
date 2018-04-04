@@ -8,7 +8,7 @@ export default {
         filename: 'bundle.js'
     },
     module: {
-        loaders: [
+        rules: [
             {
                 test: /\.js$/,
                 use: {
