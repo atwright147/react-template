@@ -1,3 +1,5 @@
+/* global __dirname */
+
 import path from 'path';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 
@@ -10,6 +12,8 @@ export default {
     module: {
         rules: [
             {
+                exclude: /node_modules/,
+                include: path.resolve(__dirname, 'src'),
                 test: /\.js$/,
                 use: {
                     loader: 'babel-loader'
