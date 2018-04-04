@@ -11,16 +11,6 @@ export default merge(common, {
             index: '/'
         },
     },
-    module: {
-        rules: [
-            {
-                test: /\.js$/,
-                use: {
-                    loader: 'babel-loader'
-                }
-            }
-        ]
-    },
     plugins: [
         new HtmlWebpackPlugin({
             template: 'src/index.html',
