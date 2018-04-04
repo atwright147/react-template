@@ -41,7 +41,7 @@ export default merge(common, {
     },
     plugins: [
         new ExtractTextPlugin({
-            filename: 'bundle.css',
+            filename: 'styles.css',
             disable: false,
             allChunks: true
         }),
