@@ -12,12 +12,31 @@ export default merge(common, {
     module: {
         rules: [
             {
-                test: /\.(sass|scss)$/,
+                test: /\.scss$/,
                 use: ExtractTextPlugin.extract({
                     fallback: 'style-loader',
-                    use: ['css-loader', 'sass-loader']
+                    use: [{
+                        loader: 'css-loader',
+                        options: {
+                            sourceMap: true,
+                            outputPath: 'dist/'
+                        }
+                    },
+                    {
+                        loader: 'postcss-loader',
+                        options: {
+                            sourceMap: true
+                        }
+                    },
+                    {
+                        loader: 'sass-loader',
+                        options: {
+                            sourceMap: true,
+                            outputPath: 'dist/'
+                        }
+                    }]
                 })
-            }
+            },
         ]
     },
     plugins: [
