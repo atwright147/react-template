@@ -14,20 +14,6 @@ export default {
                 use: {
                     loader: 'babel-loader'
                 }
-            },
-            {
-                test: /\.(sass|scss|css)$/,
-                use: [
-                    {
-                        loader: 'style-loader'
-                    },
-                    {
-                        loader: 'css-loader'
-                    },
-                    {
-                        loader: 'sass-loader'
-                    }
-                ]
             }
         ]
     },
