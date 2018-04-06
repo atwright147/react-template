@@ -22,12 +22,12 @@ export default merge(common, {
                             outputPath: 'dist/'
                         }
                     },
-                    {
-                        loader: 'postcss-loader',
-                        options: {
-                            sourceMap: true
-                        }
-                    },
+                    // {
+                    //     loader: 'postcss-loader',
+                    //     options: {
+                    //         sourceMap: true
+                    //     }
+                    // },
                     {
                         loader: 'sass-loader',
                         options: {
