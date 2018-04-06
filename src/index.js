@@ -2,6 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 
+import './styles/base.scss';
+
 import List from './components/List';
 import configureStore from './store/configureStore';
 import * as listActions from './actions/listActions';
