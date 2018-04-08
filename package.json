@@ -1,7 +1,7 @@
 {
   "name": "react-template",
   "version": "1.0.0",
-  "description": "",
+  "description": "This is a reference app for best practices regarding React, Redux, Webpack and their associated tools.",
   "main": "src/index.js",
   "scripts": {
     "build": "webpack -p --config webpack.prod.babel.js",
@@ -43,5 +43,13 @@
     "webpack": "^3.10.0",
     "webpack-dev-server": "^2.11.0",
     "webpack-merge": "^4.1.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atwright147/react-template.git"
+  },
+  "bugs": {
+    "url": "https://github.com/atwright147/react-template/issues"
+  },
+  "homepage": "https://github.com/atwright147/react-template#readme"
 }
