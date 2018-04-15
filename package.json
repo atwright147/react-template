@@ -1,13 +1,15 @@
 {
   "name": "react-template",
   "version": "1.0.0",
-  "description": "",
+  "description": "This is a reference app for best practices regarding React, Redux, Webpack and their associated tools.",
   "main": "src/index.js",
   "scripts": {
-    "dev": "webpack-dev-server",
+    "build": "webpack -p --config webpack.prod.babel.js",
+    "prebuild": "rimraf -g ./dist/**",
+    "dev": "webpack-dev-server --config webpack.dev.babel.js",
     "dev:stubs": "npm run dev & npm run stubs",
     "stubs": "stubby -d ./stubs/api.yaml --watch",
-    "lint": "eslint ./src",
+    "lint": "eslint .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -36,10 +38,20 @@
     "extract-text-webpack-plugin": "^3.0.2",
     "html-webpack-plugin": "^2.30.1",
     "node-sass": "^4.7.2",
+    "rimraf": "^2.6.2",
     "sass-loader": "^6.0.6",
     "stubby": "^4.0.0",
     "style-loader": "^0.19.1",
     "webpack": "^3.10.0",
-    "webpack-dev-server": "^2.11.0"
-  }
+    "webpack-dev-server": "^2.11.0",
+    "webpack-merge": "^4.1.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atwright147/react-template.git"
+  },
+  "bugs": {
+    "url": "https://github.com/atwright147/react-template/issues"
+  },
+  "homepage": "https://github.com/atwright147/react-template#readme"
 }
