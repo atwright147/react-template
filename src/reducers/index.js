@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
-import { routerReducer } from 'react-router-redux'
 import { createForms } from 'react-redux-form';
+
 import listItems from './listItemsReducer';
 
 const initialUserState = {
@@ -9,7 +9,6 @@ const initialUserState = {
 }
 
 const rootReducer = combineReducers({
-    routerReducer,
     listItems,
     ...createForms({
         user: initialUserState,
