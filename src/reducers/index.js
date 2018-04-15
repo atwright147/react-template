@@ -4,7 +4,7 @@ import { createForms } from 'react-redux-form';
 import listItems from './listItemsReducer';
 
 const initialUserState = {
-    username: 'John',
+    username: '',
     password: '',
 }
 
