@@ -8,6 +8,7 @@ import './styles/base.scss';
 import Home from './components/Home';
 import List from './components/List';
 import UserForm from './components/Forms/UserForm';
+import AddressForm from './components/Forms/AddressForm';
 import AnotherView from './components/AnotherView';
 import NoMatch from './components/NoMatch';
 
@@ -29,6 +30,7 @@ ReactDOM.render(
             <Route path="/" component={Home} />
             <Route path="list" component={List} />
             <Route path="user-form" component={UserForm} />
+            <Route path="address-form" component={AddressForm} />
             <Route path="another-view" component={AnotherView} />
             <Route path="*" component={NoMatch} />
         </Router>

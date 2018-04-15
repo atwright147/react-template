@@ -5,13 +5,21 @@ import listItems from './listItemsReducer';
 
 const initialUserState = {
     username: '',
-    password: '',
+    lastname: '',
+}
+const initialAddressState = {
+    address1: '',
+    address2: '',
+    city: '',
+    county: '',
+    postCode: '',
 }
 
 const rootReducer = combineReducers({
     listItems,
     ...createForms({
         user: initialUserState,
+        address: initialAddressState,
     }),
 });
 
