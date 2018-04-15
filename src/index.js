@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { Router, Route, browserHistory } from 'react-router';
 
+import './styles/base.scss';
+
 import Home from './components/Home';
 import List from './components/List';
 import AnotherView from './components/AnotherView';
@@ -10,8 +12,6 @@ import NoMatch from './components/NoMatch';
 
 import configureStore from './store/configureStore';
 import * as listActions from './actions/listActions';
-
-import './styles/base.scss'
 
 const initialState = {
     listItems: [],
