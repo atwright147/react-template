@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 
 import List from './components/List';
+import UserForm from './components/Forms/UserForm';
 import configureStore from './store/configureStore';
 import * as listActions from './actions/listActions';
 
@@ -19,7 +20,7 @@ store.dispatch(listActions.updateListItems());
 
 ReactDOM.render(
     <Provider store={store}>
-        <List />
+        <UserForm />
     </Provider>,
     document.getElementById('root')
 );
