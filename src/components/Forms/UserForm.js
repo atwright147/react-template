@@ -4,14 +4,14 @@ import { Control, Form } from 'react-redux-form';
 class UserForm extends React.Component {
     render() {
         return (
-            <Form model="user">
-                <label htmlFor="user.firstName">First name:</label>
-                <Control.text model="user.firstName" id="user.firstName" />
+            <Form model="dynamic">
+                <label htmlFor=".firstName">First name:</label>
+                <Control.text model=".firstName" id=".firstName" />
 
-                <label htmlFor="user.lastName">Last name:</label>
-                <Control.text model="user.lastName" id="user.lastName" />
+                <label htmlFor=".lastName">Last name:</label>
+                <Control.text model=".lastName" id=".lastName" />
 
-                <button type="submit">Finish registration!</button>
+                <button type="submit">Save User</button>
             </Form>
         );
     }
