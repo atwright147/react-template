@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { Router, Route, browserHistory } from 'react-router';
+import { Router, Route, browserHistory, IndexRoute } from 'react-router';
 
 import './styles/base.scss';
 
+import MainLayout from './components/Layouts/Main';
 import Home from './components/Home';
 import List from './components/List';
 import UserForm from './components/Forms/UserForm';
@@ -27,12 +28,14 @@ store.dispatch(listActions.updateListItems());
 ReactDOM.render(
     <Provider store={store}>
         <Router history={ browserHistory }>
-            <Route path="/" component={Home} />
-            <Route path="list" component={List} />
-            <Route path="user-form" component={UserForm} />
-            <Route path="address-form" component={AddressForm} />
-            <Route path="another-view" component={AnotherView} />
-            <Route path="*" component={NoMatch} />
+            <Route path="/" component={MainLayout}>
+                <IndexRoute component={Home} />
+                <Route path="list" component={List} />
+                <Route path="user-form" component={UserForm} />
+                <Route path="address-form" component={AddressForm} />
+                <Route path="another-view" component={AnotherView} />
+                <Route path="*" component={NoMatch} />
+            </Route>
         </Router>
     </Provider>,
     document.getElementById('root')
