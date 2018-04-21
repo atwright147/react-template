@@ -10,7 +10,7 @@ class MainLayout extends Component {
                         <Link to="/">Home</Link><br />
                         <Link to="/user-form">User Form</Link><br />
                         <Link to="/address-form">Address Form</Link><br />
-                        <Link to="/anther-view">Another View</Link>
+                        <Link to="/another-view">Another View</Link>
                     </nav>
                 </header>
                 <main>
