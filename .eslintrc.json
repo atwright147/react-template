@@ -4,6 +4,9 @@
         "es6": true,
         "mocha": true
     },
+    "globals": {
+        "module": true
+    },
     "plugins": [
         "react"
     ],

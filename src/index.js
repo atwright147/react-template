@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { Router, Route, browserHistory, IndexRoute } from 'react-router';
 
-import './styles/base.scss';
+import './styles/base.css';
 
 import MainLayout from './components/Layouts/Main';
 import Home from './components/Home';

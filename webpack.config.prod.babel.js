@@ -12,29 +12,16 @@ export default merge(common, {
     module: {
         rules: [
             {
-                test: /\.scss$/,
+                test: /\.css$/,
                 use: ExtractTextPlugin.extract({
                     fallback: 'style-loader',
-                    use: [{
-                        loader: 'css-loader',
-                        options: {
-                            sourceMap: true,
-                            outputPath: 'dist/'
-                        }
-                    },
-                    // {
-                    //     loader: 'postcss-loader',
-                    //     options: {
-                    //         sourceMap: true
-                    //     }
-                    // },
-                    {
-                        loader: 'sass-loader',
-                        options: {
-                            sourceMap: true,
-                            outputPath: 'dist/'
-                        }
-                    }]
+                    use: [
+                        {
+                            loader: 'css-loader', 
+                            options: { importLoaders: 1 }
+                        },
+                        'postcss-loader'
+                    ]
                 })
             },
         ]
