@@ -2,7 +2,7 @@ import path from 'path';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
 import merge from 'webpack-merge';
 
-import common from './webpack.common.babel.js';
+import common from './webpack.config.common.babel.js';
 
 export default merge(common, {
     output: {

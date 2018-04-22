@@ -4,9 +4,9 @@
   "description": "This is a reference app for best practices regarding React, Redux, Webpack and their associated tools.",
   "main": "src/index.js",
   "scripts": {
-    "build": "webpack -p --config webpack.prod.babel.js",
+    "build": "webpack -p --config webpack.config.prod.babel.js",
     "prebuild": "rimraf -g ./dist/**",
-    "dev": "webpack-dev-server --config webpack.dev.babel.js",
+    "dev": "webpack-dev-server --config webpack.config.dev.babel.js",
     "dev:stubs": "npm run dev & npm run stubs",
     "stubs": "stubby -d ./stubs/api.yaml --watch",
     "lint": "eslint .",
