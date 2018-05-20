@@ -24,4 +24,4 @@ The following command will create a full build into the `dist` folder.
 npm run build
 ```
 
-Created by Andy Wright
+Created by Andy Wright and licensed under the [MIT License](https://opensource.org/licenses/MIT).
