@@ -1,10 +1,5 @@
-:root {
-    --color-primary: #555;
-}
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    color: var(--color-primary);
-}
+@import './general';
+
 .example {
     display: grid;
     transition: all .5s;
