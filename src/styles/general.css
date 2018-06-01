@@ -1,10 +1,13 @@
 :root {
-    --color-primary: #555;
-    font-size: 62.5%;
+    --color-header-primary: #0095ff;
+    --color-footer-primary: #ddd;
+    --color-text-primary: #555;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 62.5%;  // https://snook.ca/archives/html_and_css/font-size-with-rem
 }
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    color: var(--color-primary);
+    color: var(--color-text-primary);
 
     margin: 0;
 }
@@ -15,7 +18,7 @@ main {
     font-size: 1.5rem;
 }
 header {
-    background-color: #0095ff;
+    background-color: var(--color-header-primary);
 
     // a comment
     & nav a {
@@ -34,5 +37,5 @@ header {
     }
 }
 footer {
-    background-color: #ddd;
+    background-color: var(--color-footer-primary);
 }
