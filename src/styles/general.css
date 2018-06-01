@@ -17,6 +17,7 @@ main {
 header {
     background-color: #0095ff;
 
+    // a comment
     & nav a {
         color: white;
         padding: .2rem 1rem;
