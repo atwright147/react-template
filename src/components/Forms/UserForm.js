@@ -1,6 +1,8 @@
 import React from 'react';
 import { Control, Form } from 'react-redux-form';
 
+import YesNoButtons from '../customControls/YesNoButtons';
+
 class UserForm extends React.Component {
     render() {
         return (
@@ -12,6 +14,9 @@ class UserForm extends React.Component {
 
                 <label htmlFor=".lastName">Last name:</label>
                 <Control.text model=".lastName" id=".lastName" /><br />
+
+                <p>Is Happy?</p>
+                <YesNoButtons modelName="dynamic.isHappy" mapProps={{ model: ({ model }) => model }} /><br />
 
                 <button type="submit">Save User</button>
             </Form>

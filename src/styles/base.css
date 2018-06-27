@@ -1,4 +1,5 @@
 @import './general';
+@import './yes-no-buttons';
 
 .example {
     display: grid;
