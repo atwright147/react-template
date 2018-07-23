@@ -11,26 +11,22 @@ const selectOptions = [
     { id: 5, desc: 'Item 5', value: 5, group: 'b' },
 ];
 
-class UserForm extends React.Component {
-    render() {
-        return (
-            <Form model="dynamic">
-                <h1>Filtered Select</h1>
+const UserForm = () => (
+    <Form model="dynamic">
+        <h1>Filtered Select</h1>
 
-                <div className="field">
-                    <label htmlFor="filter">Filter</label>
-                    <Control.text model=".filter" id="filter" />
-                </div>
+        <div className="field">
+            <label htmlFor="filter">Filter</label>
+            <Control.text model=".filter" id="filter" />
+        </div>
 
-                <div className="field">
-                    <label htmlFor="select">Select</label>
-                    <FilteredSelect options={selectOptions} />
-                </div>
+        <div className="field">
+            <label htmlFor="select">Select</label>
+            <FilteredSelect options={selectOptions} />
+        </div>
 
-                <button type="submit">Save User</button>
-            </Form>
-        );
-    }
-}
+        <button type="submit">Save User</button>
+    </Form>
+);
 
 export default UserForm;
