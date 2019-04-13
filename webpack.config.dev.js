@@ -1,8 +1,8 @@
-import merge from 'webpack-merge';
+const merge = require('webpack-merge');
 
-import common from './webpack.config.common.babel.js';
+const common = require('./webpack.config.common.js');
 
-export default merge(common, {
+module.exports = merge(common, {
     devtool: 'inline-source-map',
     devServer: {
         contentBase: 'src',

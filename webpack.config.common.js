@@ -1,10 +1,8 @@
-/* global __dirname */
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-import path from 'path';
-import HtmlWebpackPlugin from 'html-webpack-plugin';
-import ExtractTextPlugin from 'extract-text-webpack-plugin';
-
-export default {
+module.exports = {
     entry: './src/index.js',
     output: {
         path: path.resolve('dist'),
