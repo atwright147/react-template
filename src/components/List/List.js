@@ -1,6 +1,6 @@
 import React from 'react';
 
-const List = (items) => (
+const List = ({items}) => (
     <div>
         <h1>List</h1>
         <p>A list of things</p>
