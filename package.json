@@ -10,7 +10,7 @@
     "dev:stubs": "npm run dev & npm run stubs",
     "stubs": "stubby -d ./stubs/api.yaml --watch",
     "lint": "eslint .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "nyc --reporter=html mocha './src/**/*.spec.js' --opts ./mocha.opts"
   },
   "keywords": [],
   "author": "Andy Wright",

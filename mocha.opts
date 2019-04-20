@@ -1,0 +1,3 @@
+--require=@babel/register
+--require=jsdom-global/register.js
+--require=./test/setup.js
