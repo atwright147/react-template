@@ -44,6 +44,7 @@
     "postcss-import": "^12.0.1",
     "postcss-loader": "^3.0.0",
     "rimraf": "^2.6.3",
+    "sinon-register": "^1.0.1",
     "stubby": "^4.1.0",
     "style-loader": "^0.23.1",
     "webpack": "^4.29.6",
