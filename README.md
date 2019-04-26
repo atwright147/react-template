@@ -1,4 +1,4 @@
-# React Template
+# Boilerplate: React
 
 This is a reference app for best practices regarding React, Redux, Webpack and their associated tools.
 
