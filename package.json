@@ -1,7 +1,7 @@
 {
-  "name": "react-template",
+  "name": "boilerplate-react",
   "version": "1.0.0",
-  "description": "This is a reference app for best practices regarding React, Redux, Webpack and their associated tools.",
+  "description": "A boilerplate for best practices regarding React, Redux, Webpack and their associated tools.",
   "main": "src/index.js",
   "scripts": {
     "build": "webpack -p --config webpack.config.prod.js",
@@ -54,10 +54,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/atwright147/react-template.git"
+    "url": "git+https://github.com/atwright147/boilerplate-react.git"
   },
   "bugs": {
-    "url": "https://github.com/atwright147/react-template/issues"
+    "url": "https://github.com/atwright147/boilerplate-react/issues"
   },
-  "homepage": "https://github.com/atwright147/react-template#readme"
+  "homepage": "https://github.com/atwright147/boilerplate-react#readme"
 }
