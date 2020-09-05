@@ -13,7 +13,15 @@ module.exports = {
             {
                 exclude: /node_modules/,
                 include: path.resolve(__dirname, 'src'),
-                test: /\.js$/,
+                test: /\.js$|\.jsx/,
+                use: {
+                    loader: 'babel-loader'
+                }
+            },
+            {
+                exclude: /node_modules/,
+                include: path.resolve(__dirname, 'src'),
+                test: /\.ts$|\.tsx$/,
                 use: {
                     loader: 'babel-loader'
                 }
