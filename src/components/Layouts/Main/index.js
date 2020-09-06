@@ -4,7 +4,7 @@ import { Link, Route, Switch } from 'react-router-dom';
 import { DataLoader } from '../../../utils/DataLoader';
 import * as listActions from '../../../actions/listActions';
 
-import Home from '../../Home';
+import { Home } from '../../Home';
 import List from '../../List';
 import UserForm from '../../Forms/UserForm';
 import AddressForm from '../../Forms/AddressForm';

@@ -7,14 +7,14 @@ import './styles/base.css';
 
 import MainLayout from './components/Layouts/Main';
 
-import configureStore from './store/configStore';
+import { configStore } from './store/configStore';
 import * as listActions from './actions/listActions';
 
 const initialState = {
     listItems: [],
 }
 
-const store = configureStore(initialState);
+const store = configStore(initialState);
 
 // initialise
 store.dispatch(listActions.updateListItems());
