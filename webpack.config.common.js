@@ -1,6 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
     entry: './src/index.js',
@@ -28,27 +28,28 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                use: ExtractTextPlugin.extract({
-                    fallback: 'style-loader',
-                    use: [
-                        {
-                            loader: 'css-loader', 
-                            options: { importLoaders: 1 }
-                        },
-                        'postcss-loader'
-                    ]
-                })
+                use: [
+                    {
+                        loader: MiniCssExtractPlugin.loader,
+                        // options: {
+                        //     publicPath: '/public/path/to/',
+                        // },
+                    },
+                    'css-loader',
+                    'postcss-loader',
+                ],
             },
-            ]
+        ]
     },
     plugins: [
         new HtmlWebpackPlugin({
             template: 'src/index.html',
         }),
-        new ExtractTextPlugin({
-            filename: 'styles.css',
-            disable: false,
-            allChunks: true
-        }),    
+        new MiniCssExtractPlugin({
+            // Options similar to the same options in webpackOptions.output
+            // both options are optional
+            filename: '[name].css',
+            chunkFilename: '[id].css',
+        }),
     ]
 };
