@@ -11,6 +11,11 @@ module.exports = {
     module: {
         rules: [
             {
+                test: /\.tsx?$/,
+                use: 'ts-loader',
+                exclude: /node_modules/,
+            },
+            {
                 exclude: /node_modules/,
                 include: path.resolve(__dirname, 'src'),
                 test: /\.js$|\.jsx/,
@@ -40,6 +45,9 @@ module.exports = {
                 ],
             },
         ]
+    },
+    resolve: {
+        extensions: ['.tsx', '.ts', '.jsx', '.js'],
     },
     plugins: [
         new HtmlWebpackPlugin({
