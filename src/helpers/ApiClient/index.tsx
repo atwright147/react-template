@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { push } from 'react-router-redux';
 
-import _store from '../../store';
+import { configStore as _store } from '../../store/configStore';
 
 const handleRequest = (response, store = _store) => {
     store.dispatch({ type: 'spinner/ADD' });
@@ -21,7 +21,7 @@ const handleResponse = (response, store = _store) => {
 const handleResponseError = (error, store = _store) => {
     store.dispatch({ type: 'spinner/REMOVE' });
 
-    let status = false;
+    let status: boolean | number = false;
     if (error && error.response && error.response.status) {
         ({ status } = error.response);
     }

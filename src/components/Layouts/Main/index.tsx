@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { Link, Route, Switch } from 'react-router-dom';
 
 import { DataLoader } from '../../../utils/DataLoader';
@@ -28,7 +28,7 @@ const MainLayout = () => (
         <main>
             <Switch>
                 <Route exact path="/" component={Home} />
-                <Route exact path="/list" component={ DataLoader(List, listActions.updateListItems, error) } />
+                <Route exact path="/list" component={DataLoader(List, listActions.updateListItems, error)} />
                 <Route exact path="/user-form" component={UserForm} />
                 <Route exact path="/address-form" component={AddressForm} />
                 <Route exact path="/another-view" component={AnotherView} />

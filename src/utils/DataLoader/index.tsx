@@ -1,8 +1,15 @@
-import React from 'react';
+import * as React from 'react';
 import { connect } from 'react-redux';
 
-export const DataLoader = (Component, loadingAction = false, errorAction = false, hasChildren = false) => {
+export interface Props {
+    bodyContent: string;
+    dispatch: any;
+}
+
+export const DataLoader = (Component, loadingAction: (dispatch: any) => void, errorAction: () => () => void, hasChildren = false) => {
     class DataLoadWrapper extends React.Component {
+        props: Props;
+
         componentDidMount() {
             if (!(hasChildren && this.props.bodyContent) && loadingAction && typeof loadingAction === 'function') {
                 this.props.dispatch(loadingAction(this.props));

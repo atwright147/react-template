@@ -1,7 +1,8 @@
 import axios from 'axios';
+import { Action } from 'redux';
 
-export const updateListItems = () => {
-    return function(dispatch) {
+export const updateListItems = (): (dispatch: any) => void => (
+    (dispatch): void => {
         axios
             .get('http://localhost:8882/api/lists/1')
             .then((res) => {
@@ -11,4 +12,4 @@ export const updateListItems = () => {
                 console.error(err);  // eslint-disable-line no-console
             })
     }
-}
+);
