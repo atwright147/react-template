@@ -1,6 +1,6 @@
-import * as React from 'react';
+import React, { FC } from 'react';
 
-export const Home = () => (
+export const Home: FC = () => (
     <div>
         <h1>Home</h1>
         <p>This is the homepage!</p>

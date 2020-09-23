@@ -1,4 +1,4 @@
-// import * as React from 'react';
+// import React, { FC } from 'react';
 // import { Control, Form } from 'react-redux-form';
 
 // import FilteredSelect from '../customControls/FilteredSelect';
@@ -11,7 +11,7 @@
 //     { id: 5, desc: 'Item 5', value: 5, group: 'b' },
 // ];
 
-// const UserForm = () => (
+// const UserForm: FC = () => (
 //     <Form model="dynamic">
 //         <h1>Filtered Select</h1>
 

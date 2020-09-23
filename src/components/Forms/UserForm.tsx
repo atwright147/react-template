@@ -1,7 +1,7 @@
-import * as React from 'react';
+import React, { FC } from 'react';
 import { Control, Form } from 'react-redux-form';
 
-const UserForm = () => (
+const UserForm: FC = () => (
     <Form model="dynamic">
         <h1>User Form</h1>
 

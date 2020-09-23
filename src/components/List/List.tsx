@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { FC } from 'react';
 
 export interface Items {
     id: number;
@@ -9,7 +9,7 @@ export interface Props {
     items: Items[];
 }
 
-export const List = ({items}: Props) => (
+export const List: FC<Props> = ({ items }) => (
     <div>
         <h1>List</h1>
         <p>A list of things</p>

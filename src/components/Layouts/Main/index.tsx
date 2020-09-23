@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { FC } from 'react';
 import { Link, Route, Switch } from 'react-router-dom';
 
 import { DataLoader } from '../../../utils/DataLoader';
@@ -13,7 +13,7 @@ import NoMatch from '../../NoMatch';
 
 const error = () => () => console.error('error');
 
-const MainLayout = () => (
+const MainLayout: FC = () => (
     <div>
         <header>
             <nav>

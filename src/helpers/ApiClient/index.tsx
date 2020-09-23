@@ -1,24 +1,24 @@
 import axios from 'axios';
 import { push } from 'react-router-redux';
 
-import { configStore as _store } from '../../store/configStore';
+import { configStore } from '../../store/configStore';
 
-const handleRequest = (response, store = _store) => {
-    store.dispatch({ type: 'spinner/ADD' });
+const handleRequest = (response, store = configStore) => {
+    (store as any).dispatch({ type: 'spinner/ADD' });
     return Promise.resolve(response);
 };
 
-const handleRequestError = (error, store = _store) => {
+const handleRequestError = (error, store = configStore) => {
     store.dispatch({ type: 'spinner/REMOVE' });
     return Promise.reject(error);
 };
 
-const handleResponse = (response, store = _store) => {
+const handleResponse = (response, store = configStore) => {
     store.dispatch({ type: 'spinner/REMOVE' });
     return Promise.resolve(response);
 };
 
-const handleResponseError = (error, store = _store) => {
+const handleResponseError = (error, store = configStore) => {
     store.dispatch({ type: 'spinner/REMOVE' });
 
     let status: boolean | number = false;
