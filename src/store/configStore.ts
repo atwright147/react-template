@@ -7,8 +7,8 @@ import { rootReducer } from '../reducers';
 
 const middleware = [thunk];
 
-export const configStore = (initialState): Store => (
-    createStore<AppState>(
+export const configStore = (initialState) => (
+    createStore(
         rootReducer,
         initialState,
         composeWithDevTools(
