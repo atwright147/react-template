@@ -20,14 +20,14 @@ const initialState: AppState = {
 const store = configStore(initialState);
 
 ReactDOM.render(
-    <StrictMode>
+    // <StrictMode>
         <Provider store={store}>
             <BrowserRouter>
                 <Switch>
                     <Route path="/" component={MainLayout} />
                 </Switch>
             </BrowserRouter>
-        </Provider>
-    </StrictMode>,
+        </Provider>,
+    // </StrictMode>,
     document.getElementById('root'),
 );

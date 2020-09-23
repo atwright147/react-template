@@ -9,17 +9,17 @@ const handleRequest = (response, store = configStore) => {
 };
 
 const handleRequestError = (error, store = configStore) => {
-    store.dispatch({ type: 'spinner/REMOVE' });
+    (store as any).dispatch({ type: 'spinner/REMOVE' });
     return Promise.reject(error);
 };
 
 const handleResponse = (response, store = configStore) => {
-    store.dispatch({ type: 'spinner/REMOVE' });
+    (store as any).dispatch({ type: 'spinner/REMOVE' });
     return Promise.resolve(response);
 };
 
 const handleResponseError = (error, store = configStore) => {
-    store.dispatch({ type: 'spinner/REMOVE' });
+    (store as any).dispatch({ type: 'spinner/REMOVE' });
 
     let status: boolean | number = false;
     if (error && error.response && error.response.status) {
@@ -28,11 +28,11 @@ const handleResponseError = (error, store = configStore) => {
 
     switch (status) {
         case 401:
-            store.dispatch(push('/login'));
+            (store as any).dispatch(push('/login'));
             break;
 
         case 404:
-            store.dispatch(push('/error/404'));
+            (store as any).dispatch(push('/error/404'));
             break;
 
         default:
