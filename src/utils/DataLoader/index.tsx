@@ -1,12 +1,12 @@
-import * as React from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 
 export interface Props {
     bodyContent: string;
-    dispatch: any;
+    dispatch;
 }
 
-export const DataLoader = (Component, loadingAction: (dispatch: any) => void, errorAction: () => () => void, hasChildren = false) => {
+export const DataLoader = (Component: React.Component, loadingAction: (dispatch: any) => void, errorAction: () => () => void, hasChildren = false) => {
     class DataLoadWrapper extends React.Component {
         props: Props;
 

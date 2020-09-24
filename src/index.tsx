@@ -1,4 +1,4 @@
-import React, { StrictMode } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
@@ -20,14 +20,12 @@ const initialState: AppState = {
 const store = configStore(initialState);
 
 ReactDOM.render(
-    // <StrictMode>
-        <Provider store={store}>
-            <BrowserRouter>
-                <Switch>
-                    <Route path="/" component={MainLayout} />
-                </Switch>
-            </BrowserRouter>
-        </Provider>,
-    // </StrictMode>,
+    <Provider store={store}>
+        <BrowserRouter>
+            <Switch>
+                <Route path="/" component={MainLayout} />
+            </Switch>
+        </BrowserRouter>
+    </Provider>,
     document.getElementById('root'),
 );

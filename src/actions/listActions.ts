@@ -1,7 +1,6 @@
 import axios from 'axios';
-import { Action } from 'redux';
 
-export const updateListItems = (): (dispatch: any) => void => (
+export const updateListItems = (): (dispatch) => void => (
     (dispatch): void => {
         axios
             .get('http://localhost:8882/api/lists/1')

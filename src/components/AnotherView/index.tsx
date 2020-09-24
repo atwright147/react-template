@@ -1,6 +1,6 @@
-import * as React from 'react';
+import React, { FC } from 'react';
 
-const AnotherView = () => (
+const AnotherView: FC = () => (
     <div>
         <h1>Another View</h1>
         <p>This is another view!</p>

@@ -1,4 +1,4 @@
-import { createStore, applyMiddleware, Store } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import thunk from 'redux-thunk';
 
@@ -6,13 +6,13 @@ import { rootReducer } from '../reducers';
 
 const middleware = [thunk];
 
+// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 export const configStore = (initialState) => (
     createStore(
         rootReducer,
         initialState,
         composeWithDevTools(
             applyMiddleware(...middleware),
-            // other store enhancers if any
         )
     )
 );

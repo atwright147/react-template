@@ -1,15 +1,15 @@
 import React, { FC } from 'react';
 
-export interface Items {
+export interface Item {
     id: number;
     content: string;
 }
 
 export interface Props {
-    items: Items[];
+    items: Item[];
 }
 
-export const List: FC<Props> = ({ items }) => (
+export const List: FC<Props> = ({ items }: Props) => (
     <div>
         <h1>List</h1>
         <p>A list of things</p>
